@@ -13,6 +13,19 @@ while namesInputted != numPlayers:
 
 
 
+random.shuffle(name)
+assignments = []
 
+
+
+def assignFunction():
+    for i in range(numPlayers):
+        giver = name[i]
+        assignmentIndex = (i + 1) % numPlayers
+        reciever = name[assignmentIndex]
+        assignments.append((giver, reciever))
+
+
+assignFunction()
 
 
